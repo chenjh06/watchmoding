@@ -1,0 +1,456 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>看门狗Modding指南</title><script src="https://cdn.tailwindcss.com"></script><link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"></head><body class="bg-light-gray text-dark"><!-- 头部区域 --><header class="bg-gradient-to-r from-[#0050b3] to-primary text-white shadow-lg"><div class="container mx-auto px-4 py-12 md:py-16"><div class="max-w-4xl mx-auto text-center"><h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-shadow mb-4 leading-tight text-shadow">看门狗Modding指南</h1><p class="text-[clamp(1.1rem,2vw,1.5rem)] opacity-90 mb-8 max-w-2xl mx-auto text-shadow">从入门到精通，打造属于你的完美游戏体验</p><a href="#requirements" class="inline-block bg-gray-300 text-primary hover:bg-gray-400 px-8 py-4 rounded-lg font-semibold text-lg shadow-xl transition-all duration-300 hover:scale-105 btn-hover btn-pulse"><i class="fa fa-download mr-2"></i>开始学习</a></div></div></header><!-- 导航栏 --><nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar"><div class="container mx-auto px-4"><div class="flex justify-between items-center py-4"><div class="flex items-center space-x-8"><a href="#overview" class="font-medium text-dark-gray hover:text-primary transition-all duration-300 hover:translate-x-1 link-underline">概述</a><a href="#requirements" class="font-medium text-dark-gray hover:text-primary transition-all duration-300 hover:translate-x-1 link-underline">系统需求</a><a href="#installation" class="font-medium text-dark-gray hover:text-primary transition-all duration-300 hover:translate-x-1 link-underline">安装流程</a><a href="#modding" class="font-medium text-dark-gray hover:text-primary transition-all duration-300 hover:translate-x-1 link-underline">Modding指南</a><a href="#troubleshooting" class="font-medium text-dark-gray hover:text-primary transition-all duration-300 hover:translate-x-1 link-underline">故障排除</a></div><div class="hidden md:flex items-center space-x-6"><a href="#" class="text-dark-gray hover:text-primary transition-all duration-300 hover:scale-110 hover:animate-swing"><i class="fa fa-github text-xl"></i></a><a href="#" class="text-dark-gray hover:text-primary transition-all duration-300 hover:scale-110 hover:animate-swing"><i class="fa fa-discord text-xl"></i></a><a href="#" class="text-dark-gray hover:text-primary transition-all duration-300 hover:scale-110 hover:animate-swing"><i class="fa fa-youtube-play text-xl"></i></a></div></div></div></nav><!-- 主要内容 --><main class="container mx-auto px-4 section-padding"><!-- 概述部分 --><section id="overview" class="mb-20 scroll-mt-24 animate-zoom-in"><div class="bg-white rounded-2xl shadow-lg overflow-hidden"><div class="p-8 md:p-12"><h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-8 flex items-center animate-slide-in-left" style="animation-delay: 150ms;"><i class="fa fa-info-circle text-2xl mr-4 text-primary/80"></i>概述</h2><div class="grid grid-cols-1 lg:grid-cols-3 gap-8"><div class="lg:col-span-2"><p class="text-lg md:text-xl mb-6 leading-relaxed text-balance">本综合指南将指导你完成《看门狗》的modding过程，通过各种视觉和游戏玩法改进来提升你的游戏体验。无论你是想调整图形、添加新功能，还是彻底改变游戏，本指南都能满足你的需求。</p><p class="text-lg md:text-xl mb-8 leading-relaxed text-balance">Modding可以显著改变你玩《看门狗》的方式，但重要的是要仔细遵循这些说明，以确保顺利和愉快的体验。本指南适合初学者和有经验的modder。</p><div class="bg-light-gray p-6 rounded-xl mt-8"><h3 class="font-semibold text-xl mb-4">你将学到：</h3><ul class="space-y-3 text-lg"><li class="flex items-start animate-fade-in" style="animation-delay: 0ms;"><i class="fa fa-check-circle text-primary mt-1 mr-3"></i><span>如何安全地为《看门狗》安装mods</span></li><li class="flex items-start animate-fade-in" style="animation-delay: 100ms;"><i class="fa fa-check-circle text-primary mt-1 mr-3"></i><span>查找和使用最佳modding工具</span></li><li class="flex items-start animate-fade-in" style="animation-delay: 200ms;"><i class="fa fa-check-circle text-primary mt-1 mr-3"></i><span>创建备份以保护你的游戏文件</span></li><li class="flex items-start animate-fade-in" style="animation-delay: 300ms;"><i class="fa fa-check-circle text-primary mt-1 mr-3"></i><span>解决常见的modding问题</span></li><li class="flex items-start animate-fade-in" style="animation-delay: 400ms;"><i class="fa fa-check-circle text-primary mt-1 mr-3"></i><span>针对不同游戏风格的推荐mods</span></li></ul></div></div><div class="flex flex-col justify-center items-center"><div class="bg-primary/10 p-8 rounded-full text-center mb-8"><div class="text-5xl font-bold text-primary mb-2">10+</div><div class="text-xl font-medium">小时内容</div></div><div class="bg-secondary/10 p-8 rounded-full text-center"><div class="text-5xl font-bold text-secondary mb-2">100%</div><div class="text-xl font-medium">更新指南</div></div></div></div></div></div></section><!-- 系统需求部分 --><section id="requirements" class="mb-20 scroll-mt-24 animate-slide-in-up" style="animation-delay: 100ms;"><div class="bg-white rounded-2xl shadow-lg overflow-hidden"><div class="p-8 md:p-12"><h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-8 flex items-center"><i class="fa fa-check-square-o text-2xl mr-4 text-primary/80"></i>系统需求</h2><div class="grid grid-cols-1 lg:grid-cols-2 gap-10"><div><h3 class="text-xl font-semibold mb-6 flex items-center"><i class="fa fa-gamepad text-secondary mr-3"></i>游戏需求</h3><ul class="space-y-4"><li class="flex items-start animate-fade-in" style="animation-delay: 0ms;"><i class="fa fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><span class="text-lg">《看门狗》（推荐完整版）</span></li><li class="flex items-start animate-fade-in" style="animation-delay: 100ms;"><i class="fa fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><span class="text-lg">安装最新游戏更新</span></li><li class="flex items-start animate-fade-in" style="animation-delay: 200ms;"><i class="fa fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><span class="text-lg">Steam、Uplay或Epic Games账户（取决于你的版本）</span></li><li class="flex items-start animate-fade-in" style="animation-delay: 300ms;"><i class="fa fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><span class="text-lg">PC上的管理员权限</span></li></ul><h3 class="text-xl font-semibold mt-10 mb-6 flex items-center"><i class="fa fa-wrench text-secondary mr-3"></i>工具</h3><ul class="space-y-4"><li class="flex items-start animate-fade-in" style="animation-delay: 400ms;"><i class="fa fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><span class="text-lg">Mod管理器（推荐Mod Organizer 2或Nexus Mod Manager）</span></li><li class="flex items-start animate-fade-in hover:bg-light-gray/50 transition-colors duration-300" style="animation-delay: 0ms;"><i class="fa fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><span class="text-lg">解压软件（WinRAR、7-Zip或类似软件）</span></li><li class="flex items-start animate-fade-in hover:bg-light-gray/50 transition-colors duration-300" style="animation-delay: 100ms;"><i class="fa fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><span class="text-lg">文本编辑器（Notepad++、Visual Studio Code或类似软件）</span></li><li class="flex items-start animate-fade-in hover:bg-light-gray/50 transition-colors duration-300" style="animation-delay: 200ms;"><i class="fa fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><span class="text-lg">图形编辑软件（可选，用于自定义纹理）</span></li></ul></div><div><h3 class="text-xl font-semibold mb-6 flex items-center"><i class="fa fa-microchip text-secondary mr-3"></i>系统规格</h3><div class="bg-light-gray rounded-xl p-6 mb-8 transition-all duration-300 hover:shadow-md hover:scale-[1.02] animate-slide-in-left" style="animation-delay: 0ms;"><h4 class="font-semibold text-xl mb-4 text-center text-dark">最低配置</h4><ul class="space-y-3"><li class="flex justify-between items-center py-2 border-b border-gray-200"><span class="font-medium text-dark-gray">操作系统:</span><span>Windows 7 SP1、Windows 8、Windows 8.1、Windows 10（仅64位版本）</span></li><li class="flex justify-between items-center py-2 border-b border-gray-200"><span class="font-medium text-dark-gray">处理器:</span><span>Intel Core i5-2500K @ 3.3 GHz / AMD FX-6350 @ 3.9 GHz</span></li><li class="flex justify-between items-center py-2 border-b border-gray-200"><span class="font-medium text-dark-gray">内存:</span><span>6 GB RAM</span></li><li class="flex justify-between items-center py-2 border-b border-gray-200"><span class="font-medium text-dark-gray">显卡:</span><span>NVIDIA GeForce GTX 660 / AMD Radeon HD 7870（2GB VRAM，支持Shader Model 5.0）</span></li><li class="flex justify-between items-center py-2"><span class="font-medium text-dark-gray">存储空间:</span><span>50 GB 可用空间</span></li></ul></div><div class="bg-light-gray rounded-xl p-6 transition-all duration-300 hover:shadow-md hover:scale-[1.02] animate-slide-in-left" style="animation-delay: 100ms;"><h4 class="font-semibold text-xl mb-4 text-center text-dark">推荐配置</h4><ul class="space-y-3"><li class="flex justify-between items-center py-2 border-b border-gray-200"><span class="font-medium text-dark-gray">操作系统:</span><span>Windows 10（64位）</span></li><li class="flex justify-between items-center py-2 border-b border-gray-200"><span class="font-medium text-dark-gray">处理器:</span><span>Intel Core i7-3770 @ 3.4 GHz / AMD FX-8350 @ 4.0 GHz</span></li><li class="flex justify-between items-center py-2 border-b border-gray-200"><span class="font-medium text-dark-gray">内存:</span><span>8 GB RAM</span></li><li class="flex justify-between items-center py-2 border-b border-gray-200"><span class="font-medium text-dark-gray">显卡:</span><span>NVIDIA GeForce GTX 780 / AMD Radeon R9 290（3GB VRAM，支持Shader Model 5.0）</span></li><li class="flex justify-between items-center py-2"><span class="font-medium text-dark-gray">存储空间:</span><span>50 GB 可用空间</span></li></ul></div></div></div></div></div></section><!-- 安装流程部分 --><section id="installation" class="mb-20 scroll-mt-24 animate-slide-in-up" style="animation-delay: 200ms;"><div class="bg-white rounded-2xl shadow-lg overflow-hidden"><div class="p-8 md:p-12"><h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-8 flex items-center"><i class="fa fa-download text-2xl mr-4 text-primary/80"></i>安装流程</h2><div class="space-y-12"><div class="flex"><div class="mr-6 flex-shrink-0"><div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-lg btn-ripple">1</div></div><div class="flex-grow"><h3 class="text-xl font-semibold mb-4">备份游戏文件</h3><p class="text-lg mb-6 text-balance">在开始任何modding之前，备份你的游戏文件是至关重要的。这将确保你可以在出现问题时恢复到原始状态。</p><div class="bg-light-gray p-6 rounded-xl animate-slide-in-up" style="animation-delay: 0ms;"><h4 class="font-medium text-lg mb-3">操作步骤:</h4><ol class="list-decimal pl-5 space-y-3 text-lg"><li>找到你的《看门狗》游戏安装目录</li><li>将整个游戏文件夹复制到另一个位置（如外部硬盘或其他分区）</li><li>创建一个系统还原点作为额外预防措施</li></ol></div></div></div><div class="flex"><div class="mr-6 flex-shrink-0"><div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-lg btn-ripple">2</div></div><div class="flex-grow"><h3 class="text-xl font-semibold mb-4">安装Mod管理器</h3><p class="text-lg mb-6 text-balance">使用Mod管理器可以更轻松地安装、组织和卸载mods，而不会混乱你的游戏文件。</p><div class="bg-light-gray p-6 rounded-xl animate-slide-in-up" style="animation-delay: 100ms;"><h4 class="font-medium text-lg mb-3">操作步骤:</h4><ol class="list-decimal pl-5 space-y-3 text-lg"><li>下载并安装Mod Organizer 2或Nexus Mod Manager</li><li>运行Mod管理器并设置它指向你的《看门狗》游戏目录</li><li>在Mod管理器中为《看门狗》创建一个新配置文件</li></ol></div></div></div><div class="flex"><div class="mr-6 flex-shrink-0"><div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-lg btn-ripple">3</div></div><div class="flex-grow"><h3 class="text-xl font-semibold mb-4">安装基础Mod框架</h3><p class="text-lg mb-6 text-balance">某些mods需要特定的框架才能正常工作。这里我们将安装必要的基础框架。</p><div class="bg-light-gray p-6 rounded-xl animate-slide-in-up" style="animation-delay: 200ms;">
+                                    <h4 class="font-medium text-lg mb-3">操作步骤:</h4>
+                                    <ol class="list-decimal pl-5 space-y-3 text-lg">
+                                        <li>从Nexus Mods或官方论坛下载必要的框架（如Script Hook、Uplay/Steam无加密补丁等）</li>
+                                        <li>将下载的文件解压到你的游戏目录或通过Mod管理器安装</li>
+                                        <li>确保所有框架文件都正确放置且没有冲突</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="mr-6 flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-lg btn-ripple">4</div>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-semibold mb-4">安装游戏优化补丁</h3>
+                                <p class="text-lg mb-6 text-balance">
+                                    这些补丁可以提高游戏性能，修复常见问题，并为其他mods提供更好的兼容性。
+                                </p>
+                                <div class="bg-light-gray p-6 rounded-xl">
+                                    <h4 class="font-medium text-lg mb-3">推荐优化补丁:</h4>
+                                    <ul class="list-disc pl-5 space-y-2 text-lg">
+                                        <li>《看门狗》性能增强补丁</li>
+                                        <li>纹理质量改进包</li>
+                                        <li>修复和调整集合</li>
+                                    </ul>
+                                    <h4 class="font-medium mt-4 mb-3">操作步骤:</h4>
+                                    <ol class="list-decimal pl-5 space-y-2 text-lg">
+                                        <li>从可靠来源下载推荐的优化补丁</li>
+                                        <li>使用Mod管理器安装每个补丁</li>
+                                        <li>在Mod管理器中启用这些补丁</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modding指南部分 -->
+        <section id="modding" class="mb-20 scroll-mt-24 animate-fadeIn">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-8 flex items-center">
+                        <i class="fa fa-paint-brush text-2xl mr-4 text-primary/80"></i>
+                        Modding指南
+                    </h2>
+
+                    <!-- Bento Grid风格布局 -->
+                    <div class="bento-grid mb-12">
+                        <div class="bento-item bg-gradient-to-br from-primary/5 to-primary/10 p-6 md:p-8 animate-slide-in-up" style="grid-row: span 2;">
+                            <div class="text-4xl text-primary mb-6">
+                                <i class="fa fa-picture-o"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-4">图形和视觉Mods</h3>
+                            <p class="text-lg mb-6 text-balance">
+                                增强游戏的视觉效果，包括更高质量的纹理、改进的照明、动态天气等。
+                            </p>
+                            <ul class="space-y-3 text-lg mb-6">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                    <span>高分辨率纹理包</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                    <span>ENB或Reshade着色器</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                    <span>改进的阴影和光照</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                                    <span>动态天气系统</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-block text-primary font-medium hover:underline text-lg">
+                                查看推荐图形Mods <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+
+                        <div class="bento-item bg-gradient-to-br from-secondary/5 to-secondary/10 p-6 md:p-8 animate-slide-in-up" style="animation-delay: 100ms;">
+                            <div class="text-4xl text-secondary mb-4">
+                                <i class="fa fa-gamepad"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">游戏玩法Mods</h3>
+                            <p class="text-lg mb-4 text-balance">
+                                修改游戏机制，添加新功能，或改变游戏难度以提供全新的游戏体验。
+                            </p>
+                            <ul class="space-y-2 text-lg">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span>改进的战斗系统</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span>新武器和装备</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span>角色定制选项</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-3"></i>
+                                    <span>游戏难度调整</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-block text-secondary font-medium hover:underline text-lg">
+                                查看推荐游戏玩法Mods <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+
+                        <div class="bento-item bg-gradient-to-br from-accent/5 to-accent/10 p-6 md:p-8 animate-slide-in-up" style="animation-delay: 200ms;">
+                            <div class="text-4xl text-accent mb-4">
+                                <i class="fa fa-map-o"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">地图和任务Mods</h3>
+                            <p class="text-lg mb-4 text-balance">
+                                添加新区域、任务或改变现有地图布局以扩展游戏内容。
+                            </p>
+                            <ul class="space-y-2 text-lg">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>新的可探索区域</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>自定义任务和剧情</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>改进的导航系统</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>隐藏地点和彩蛋</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-block text-accent font-medium hover:underline text-lg transition-all duration-300 hover:text-accent/80">
+                                查看推荐地图Mods <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+
+                        <div class="bento-item bg-gradient-to-br from-dark-gray/5 to-dark-gray/10 p-6 md:p-8">
+                            <div class="text-4xl text-dark-gray mb-4">
+                                <i class="fa fa-code"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-3">工具和实用Mods</h3>
+                            <p class="text-lg mb-4 text-balance">
+                                提供游戏内工具和功能，帮助你更轻松地玩游戏或创建自己的mods。
+                            </p>
+                            <ul class="space-y-2 text-lg">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-dark-gray mt-1 mr-3"></i>
+                                    <span>调试模式和控制台</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-dark-gray mt-1 mr-3"></i>
+                                    <span>截图和录制工具</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-dark-gray mt-1 mr-3"></i>
+                                    <span>Mod开发工具包</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-dark-gray mt-1 mr-3"></i>
+                                    <span>性能监控和优化</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-block text-dark-gray font-medium hover:underline text-lg transition-all duration-300 hover:text-dark-gray/80">
+                                查看推荐工具Mods <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-primary/5 rounded-2xl p-8">
+                        <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                            <i class="fa fa-lightbulb-o text-primary mr-3"></i>
+                            Mod安装步骤
+                        </h3>
+                        <ol class="space-y-6 text-lg">
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0">
+                                    <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">1</div>
+                                </div>
+                                <div>
+                                    <span class="font-medium">选择Mods:</span>
+                                    从可靠来源（如Nexus Mods、Steam Workshop或官方论坛）下载你想要的mods。
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0">
+                                    <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">2</div>
+                                </div>
+                                <div>
+                                    <span class="font-medium">准备安装:</span>
+                                    确保你已按照前面的步骤安装了基础框架和Mod管理器。
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0">
+                                    <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">3</div>
+                                </div>
+                                <div>
+                                    <span class="font-medium">安装Mod:</span>
+                                    使用Mod管理器安装下载的mod文件。大多数情况下，你可以直接通过Mod管理器下载并安装mods。
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0">
+                                    <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">4</div>
+                                </div>
+                                <div>
+                                    <span class="font-medium">启用Mod:</span>
+                                    在Mod管理器中启用你刚安装的mod。注意mod加载顺序可能会影响性能和兼容性。
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0">
+                                    <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">5</div>
+                                </div>
+                                <div>
+                                    <span class="font-medium">测试Mod:</span>
+                                    启动游戏测试新安装的mod。如果遇到问题，请尝试禁用最近安装的mod。
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="mr-4 flex-shrink-0">
+                                    <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold">6</div>
+                                </div>
+                                <div>
+                                    <span class="font-medium">调整和优化:</span>
+                                    根据需要调整mod设置以获得最佳体验。
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 故障排除部分 -->
+        <section id="troubleshooting" class="mb-20 scroll-mt-24 animate-fadeIn">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-8 flex items-center">
+                        <i class="fa fa-wrench text-2xl mr-4 text-primary/80"></i>
+                        故障排除
+                    </h2>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-6 flex items-center">
+                                <i class="fa fa-exclamation-triangle text-yellow-500 mr-3"></i>
+                                常见问题
+                            </h3>
+
+                            <div class="space-y-6">
+                                <div class="bg-light-gray p-6 rounded-xl">
+                                    <h4 class="font-medium text-xl mb-3">游戏无法启动</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>确保所有mods与你当前的游戏版本兼容</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>尝试禁用最近安装的mod</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>验证游戏文件完整性</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>检查是否缺少必要的DLL文件</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-light-gray p-6 rounded-xl">
+                                    <h4 class="font-medium text-xl mb-3">性能问题</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>降低图形mod的设置</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>禁用不必要的mod</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>确保你的系统满足推荐配置</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>更新显卡驱动程序</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-light-gray p-6 rounded-xl">
+                                    <h4 class="font-medium text-xl mb-3">Mod冲突</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>检查mod加载顺序</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>使用冲突解决工具</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>避免安装功能重叠的mod</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                            <span>一次只安装一个mod并测试</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-6 flex items-center">
+                                <i class="fa fa-question-circle text-blue-500 mr-3"></i>
+                                常见问题解答
+                            </h3>
+
+                            <div class="space-y-6">
+                                <div class="border-l-4 border-primary pl-5 py-2 animate-fade-in hover:bg-primary/5 transition-colors duration-300 cursor-pointer" style="animation-delay: 0ms;">
+                                    <h4 class="font-medium text-xl mb-2">Modding会导致我被VAC封禁吗？</h4>
+                                    <p class="text-lg">
+                                        在离线模式下使用mods不会导致VAC封禁。但是，使用某些修改游戏玩法的mods可能违反游戏服务条款。
+                                    </p>
+                                </div>
+
+                                <div class="border-l-4 border-primary pl-5 py-2 animate-fade-in" style="animation-delay: 100ms;">
+                                    <h4 class="font-medium text-xl mb-2">如何卸载mods？</h4>
+                                    <p class="text-lg">
+                                        使用Mod管理器禁用或删除mods。如果你手动安装了mods，请确保删除所有添加的文件。
+                                    </p>
+                                </div>
+
+                                <div class="border-l-4 border-primary pl-5 py-2 animate-fade-in" style="animation-delay: 200ms;">
+                                    <h4 class="font-medium text-xl mb-2">我可以在多人游戏中使用mods吗？</h4>
+                                    <p class="text-lg">
+                                        大多数mods不支持多人游戏，使用mods可能导致你被服务器封禁。始终检查mod的描述以确认其兼容性。
+                                    </p>
+                                </div>
+
+                                <div class="border-l-4 border-primary pl-5 py-2 animate-fade-in" style="animation-delay: 300ms;">
+                                    <h4 class="font-medium text-xl mb-2">如何报告mod问题？</h4>
+                                    <p class="text-lg">
+                                        在mod的官方页面或论坛上报告问题，提供详细信息，包括你的系统规格、mod列表和错误日志。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 bg-red-50 rounded-2xl p-8 border-l-4 border-red-500">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fa fa-warning text-red-500 mr-3"></i>
+                            重要安全提示
+                        </h3>
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-start">
+                                <i class="fa fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                                <span>只从可信来源下载mods，避免可疑网站</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                                <span>定期备份你的游戏文件和存档</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                                <span>使用Mod管理器来组织和管理你的mods</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                                <span>保持游戏和mods更新到最新版本</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                                <span>在安装新mod之前，研究并阅读用户评论</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社区部分 -->
+        <section class="mb-20 animate-fadeIn">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-primary mb-8 flex items-center">
+                        <i class="fa fa-users text-2xl mr-4 text-primary/80"></i>
+                        加入Modding社区
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bento-item bg-gradient-to-br from-primary/5 to-primary/10 p-8 animate-slide-in-up hover:animate-swing hover:scale-105 hover:shadow-lg" style="animation-delay: 0ms;">
+                            <div class="text-4xl text-primary mb-6">
+                                <i class="fa fa-comments"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">论坛讨论</h3>
+                            <p class="text-lg mb-6 text-balance">
+                                加入我们的论坛讨论，分享你的modding经验，提问和帮助其他玩家。
+                            </p>
+                            <a href="#" class="inline-block bg-primary text-white hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-all btn-hover btn-ripple text-lg">
+                                访问论坛
+                            </a>
+                        </div>
+
+                        <div class="bento-item bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 animate-slide-in-up hover:animate-swing hover:scale-105 hover:shadow-lg" style="animation-delay: 100ms;">
+                            <div class="text-4xl text-secondary mb-6">
+                                <i class="fa fa-share-alt"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">分享你的Mods</h3>
+                            <p class="text-lg mb-6 text-balance">
+                                创建并分享你自己的《看门狗》mods，获得社区反馈和认可。
+                            </p>
+                            <a href="#" class="inline-block bg-secondary text-white hover:bg-secondary/90 px-6 py-3 rounded-lg font-medium transition-all btn-hover btn-ripple text-lg">
+                                上传Mod
+                            </a>
+                        </div>
+
+                        <div class="bento-item bg-gradient-to-br from-accent/5 to-accent/10 p-8 animate-slide-in-up hover:animate-swing hover:scale-105 hover:shadow-lg" style="animation-delay: 200ms;">
+                            <div class="text-4xl text-accent mb-6">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4">Modding活动</h3>
+                            <p class="text-lg mb-6 text-balance">
+                                参与我们定期举办的modding比赛和活动，赢取奖励和荣誉。
+                            </p>
+                            <a href="#" class="inline-block bg-accent text-white hover:bg-accent/90 px-6 py-3 rounded-lg font-medium transition-all btn-hover btn-pulse btn-ripple text-lg">
+                                参与活动
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
